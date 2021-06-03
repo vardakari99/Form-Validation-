@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:900,900italic,500,400italic,100,700italic,300,700,500italic,100italic,300italic,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style.css">
+    <title>Login Page</title>
+</head>
+<body>
+    
+<div id="fback"><div class="girisback"></div><div class="kayitback"></div></div>
+
+<div id="textbox">
+  <div class="toplam">
+
+    <div class="left">
+      <div id="ic">
+        <h2>Sign Up</h2>
+        <p>Synth polaroid bitters chillwave pickled. Vegan disrupt tousled.</p>
+        <form class="girisyap" name="signup_form" id="signup_form" method="post" enctype="multipart/form-data" onsubmit="return false;">
+
+          <div class="yarim form-group">
+            <label class="control-label" for="signup_username">Username</label>
+            <input onmousedown="myFunc(0)" type="text" name="signup_username" id="signup_username" class="bp-suggestions form-control" cols="50" rows="10" onblur="checkusername()"></input>
+            <span id="username-span"></span>
+          </div>
+        <div class="yarim sn form-group">
+          <label class="control-label" for="signup_fullname">Full Name</label>
+          <input onmousedown="myFunc(1)" type="text" name="signup_fullname" id="signup_fullname" value="" class="bp-suggestions form-control" cols="50" rows="10" onblur="checkfullname()"></input>
+          <span id="fullname-span"></span>
+      </div>
+      <div class="form-group">
+        <label class="control-label" for="signup_email">Email</label>
+        <input onmousedown="myFunc(2)" type="text" name="signup_email" id="signup_email" class="bp-suggestions form-control" cols="50" rows="10" onblur="checkemail()"></input>
+        <span id="email-span"></span>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="signup_password">Password</label>
+      <input onmousedown="myFunc(3)" type="text" name="signup_password" id="signup_password" value="" class="bp-suggestions form-control" cols="50" rows="10" onblur="signCheckpassword();"></input>
+      <span id="signup-password-span"></span>
+  </div>
+  <div class="form-group soninpt">
+    <label class="control-label" for="signup_about">About</label>
+    <input onmousedown="myFunc(4)" type="text" name="signup_about" id="signup_about" class="bp-suggestions form-control" cols="50" rows="10" onblur="checkabout();"></input>
+    <span id="about-span"></span>
+</div>
+<input type="submit" name="signup_submit" id="signup_submit" value="Sign Up" class="girisbtn"/>
+</form>
+
+<button id="moveright">Login</button>
+</div>
+</div>
+
+<div class="right">
+  <div id="ic">
+    <h2>Login</h2>
+    <p>Synth polaroid bitters chillwave pickled. Vegan disrupt tousled.</p>
+    <form name="login-form" class="girisyap" id="sidebar-user-login" method="post" onsubmit="return false;">
+
+      <div class="form-group">
+        <label class="control-label" for="log">Username</label>
+        <input onmousedown="myFunc(5)" type="text" name="log" class="bp-suggestions form-control" cols="50" rows="10"></input>
+      </div>
+    <div class="form-group soninpt">
+      <label class="control-label" for="pwd">Password</label>
+      <input onmousedown="myFunc(6)" type="password" name="pwd" class="bp-suggestions form-control" cols="50" rows="10" onblur="loginCheckpassword();"></input>
+  </div>
+  <input type="submit" value="Login" class="girisbtn" tabindex="100"/>
+  </form>
+
+<button id="moveleft">Sign Up</button>
+</div>
+</div>
+
+</div>
+</div>
+
+<script src="script.js" type="text/javascript"></script>
+<!-- <script>
+    $('.form-control').on("blur", function (e) {
+    $(this).parents('.form-group').toggleClass('focused', (e.type === "focus" || this.value.length > 0));
+}).trigger("blur");
+
+$('#moveleft').click(function() {
+  $('#textbox').animate({
+    'marginLeft': "0" //moves left
+  });
+
+  $('.toplam').animate({
+    'marginLeft': "100%" //moves right
+  });
+});
+
+$('#moveright').click(function() {
+  $('#textbox').animate({
+    'marginLeft': "50%" //moves right
+  });
+
+  $('.toplam').animate({
+    'marginLeft': "0" //moves right
+  });
+});
+</script> -->
+</body>
+</html>
